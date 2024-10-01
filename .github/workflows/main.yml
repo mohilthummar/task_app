@@ -25,7 +25,8 @@ jobs:
           git config --global user.name mohilthummar
           git status
           # in line 30 after @ add your repo link  
-          git remote add origin https://${{secrets.HOSTING_SECRET}}@github.com/mohilthummar/task_app.git
+          git remote add origin https://mohilthummar:Mo@05#10@github.com/mohilthummar/task_app.git
+          # git remote add origin https://${{secrets.HOSTING_SECRET}}@github.com/mohilthummar/task_app.git
           git checkout -b gh-pages
           git add --all
           git commit -m "Web Updated"
