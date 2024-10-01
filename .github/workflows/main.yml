@@ -23,7 +23,6 @@ jobs:
           git config --global user.email mohil.0510@gmail.com
           git config --global user.name mohilthummar
           git status
-          # git remote add origin https://mohilthummar:Mo@05#10@github.com/mohilthummar/task_app.git
           git remote add origin https://${{secrets.HOSTING_SECRET}}@github.com/mohilthummar/task_app.git
           git checkout -b gh-pages
           git add --all
