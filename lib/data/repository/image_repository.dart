@@ -12,7 +12,7 @@ class ImageRepository extends ClientService {
       queryParameters: {
         "page": page,
         "per_page": perPage,
-        "q": "nature",
+        "q": "animal+forest+sky",
         "pretty": true,
         "image_type": "photo",
         "key": "46274266-0167e335b239589d776bde3ad",

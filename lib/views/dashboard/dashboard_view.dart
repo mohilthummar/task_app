@@ -65,7 +65,7 @@ class DashboardView extends GetView<DashboardController> {
         alignment: Alignment.bottomRight,
         children: [
           AppImageView(
-            imagePath: image.largeImageUrl ?? "",
+            imagePath: image.webformatUrl ?? "",
             fit: BoxFit.cover,
             height: Get.width,
             width: Get.height,
