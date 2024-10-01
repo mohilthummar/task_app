@@ -10,10 +10,9 @@ import '../../data/services/client/result.dart';
 class DashboardController extends GetxController {
   ScrollController scrollController = ScrollController();
 
-  ImageRepository imageRepository = ImageRepository();
   RxList<ImageModel> imageList = <ImageModel>[].obs;
+  ImageRepository imageRepository = ImageRepository();
 
-  RxInt index = 0.obs;
   RxInt currentPage = 1.obs;
   RxBool isFetching = false.obs;
   RxBool pageLoader = false.obs;
@@ -67,7 +66,6 @@ class DashboardController extends GetxController {
   void postPaginationFunction() {
     scrollController.addListener(() {
       var nextPageTrigger = 0.80 * scrollController.position.maxScrollExtent;
-
       if (scrollController.position.pixels > nextPageTrigger) {
         if (isFetching.isFalse) {
           currentPage++;
