@@ -20,11 +20,9 @@ jobs:
       - run: |
           cd build/web
           git init
-          # In lines 24 and 25 type your email ID and username respectively
           git config --global user.email mohil.0510@gmail.com
           git config --global user.name mohilthummar
           git status
-          # in line 30 after @ add your repo link  
           git remote add origin https://mohilthummar:Mo@05#10@github.com/mohilthummar/task_app.git
           # git remote add origin https://${{secrets.HOSTING_SECRET}}@github.com/mohilthummar/task_app.git
           git checkout -b gh-pages
