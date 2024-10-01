@@ -3,15 +3,17 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: write
 jobs:
   build:
     name: Build Web
     env:
-      my_secret: ${{secrets.HOSTING_SECRET}}
+      my_secret: ${{ secrets.HOSTING_SECRET }}
       # my_secret: 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
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'
@@ -26,7 +28,7 @@ jobs:
           git config --global user.name mohilthummar
           git status
           # in line 30 after @ add your repo link  
-          git remote add origin https://${{secrets.HOSTING_SECRET}}@https://github.com/mohilthummar/task_app.git
+          git remote add origin https://${{ secrets.HOSTING_SECRET }}@https://github.com/mohilthummar/task_app.git
           # git remote add origin https://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@https://github.com/mohilthummar/task_app.git
           git checkout -b gh-pages
           git add --all
